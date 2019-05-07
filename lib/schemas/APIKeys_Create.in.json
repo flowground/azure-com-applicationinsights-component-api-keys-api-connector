@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceGroupName": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceName": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "An Application Insights component API Key creation request definition.",
+            "properties": {
+                "linkedReadProperties": {
+                    "description": "The read access rights of this API Key.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "linkedWriteProperties": {
+                    "description": "The write access rights of this API Key.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "name": {
+                    "description": "The name of the API Key.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
